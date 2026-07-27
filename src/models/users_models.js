@@ -1,23 +1,49 @@
-let user = [
-    {
-        id: 1,
-        name: "admin",
-        email: "admin@gmail.com",
-        password: "1234"
-    },
-    {
-        id: 2,
-        name: "Alma'ruf Hidayat",
-        email: "hidayatmaruf99@gmail.com",
-        password: "1234"
+import fs from "fs"
+import path from "path"
+
+const FILE_PATH = path.join(process.cwd(), 'database', 'user.json');
+
+function directory(filePath) {
+    const dirname = path.dirname(filePath);
+    if (!fs.existsSync(dirname)) {
+        fs.mkdirSync(dirname, { recursive: true });
     }
-]
+}
+
+function loadUser() {
+    try {
+        directory(FILE_PATH);
+        if (!fs.existsSync(FILE_PATH)) {
+            const initialData = [];
+            fs.writeFileSync(FILE_PATH, JSON.stringify(initialData, null, 2), 'utf-8');
+            return initialData;
+        }
+        const fileContent = fs.readFileSync(FILE_PATH, 'utf-8');
+        return JSON.parse(fileContent);
+    } catch (error) {
+        console.error('[LOAD FILE ERROR]', error.message);
+        return [];
+    }
+}
+
+function saveUser(data) {
+    try {
+        directory(FILE_PATH);
+        fs.writeFileSync(FILE_PATH, JSON.stringify(data, null, 2), 'utf-8');
+    } catch (error) {
+        console.error('[FILE SAVE ERROR]', error.message);
+    }
+}
+
+let user = loadUser()
 
 function createUser ( newUser ) {
     user = [
         ...user,
         newUser
     ]
+
+    saveUser(user)
 
     return newUser
 }
@@ -27,8 +53,6 @@ function getUsers () {
 }
 
 function DetailUser (email) {
-    console.log("testing", email)
-    // user.find(u => u.email )
     let results = user.find(u => u.email === email)
     if (results === undefined) {
         return {
@@ -50,6 +74,7 @@ function changeUser(emailUser, email, name) {
     if (results !== -1) {
         user[results].email = email
         user[results].name = name
+        saveUser(user)
         return {
             status: true,
             message: `Updated ${emailUser} success`,
@@ -70,6 +95,7 @@ function deleteUser(emailUser, email, name) {
     if (results !== -1) {
         let res = user.filter(e => e.email !== emailUser)
         user = res
+        saveUser(user)
         return {
             status: true,
             message: `Delete user ${emailUser} success`,
