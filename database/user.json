@@ -12,9 +12,111 @@
     "password": "1234"
   },
   {
-    "id": "3",
-    "name": "Alhy Ghufron",
-    "email": "alhy23@gmail.com",
+    "id": 3,
+    "name": "Budi Santoso",
+    "email": "budi.santoso@gmail.com",
+    "password": "1234"
+  },
+  {
+    "id": 4,
+    "name": "Siti Nurhaliza",
+    "email": "siti.nurhaliza@gmail.com",
+    "password": "1234"
+  },
+  {
+    "id": 5,
+    "name": "Rizky Pratama",
+    "email": "rizky.pratama@gmail.com",
+    "password": "1234"
+  },
+  {
+    "id": 6,
+    "name": "Dewi Anggraini",
+    "email": "dewi.anggraini@gmail.com",
+    "password": "1234"
+  },
+  {
+    "id": 7,
+    "name": "Ahmad Fauzi",
+    "email": "ahmad.fauzi@gmail.com",
+    "password": "1234"
+  },
+  {
+    "id": 8,
+    "name": "Eka Putra",
+    "email": "eka.putra@gmail.com",
+    "password": "1234"
+  },
+  {
+    "id": 9,
+    "name": "Fitri Handayani",
+    "email": "fitri.handayani@gmail.com",
+    "password": "1234"
+  },
+  {
+    "id": 10,
+    "name": "Gilang Ramadhan",
+    "email": "gilang.ramadhan@gmail.com",
+    "password": "1234"
+  },
+  {
+    "id": 11,
+    "name": "Hany Permata",
+    "email": "hany.permata@gmail.com",
+    "password": "1234"
+  },
+  {
+    "id": 12,
+    "name": "Indra Wijaya",
+    "email": "indra.wijaya@gmail.com",
+    "password": "1234"
+  },
+  {
+    "id": 13,
+    "name": "Joko Susilo",
+    "email": "joko.susilo@gmail.com",
+    "password": "1234"
+  },
+  {
+    "id": 14,
+    "name": "Kiki Amalia",
+    "email": "kiki.amalia@gmail.com",
+    "password": "1234"
+  },
+  {
+    "id": 15,
+    "name": "Lukman Hakim",
+    "email": "lukman.hakim@gmail.com",
+    "password": "1234"
+  },
+  {
+    "id": 16,
+    "name": "Maya Sari",
+    "email": "maya.sari@gmail.com",
+    "password": "1234"
+  },
+  {
+    "id": 17,
+    "name": "Naufal Hadi",
+    "email": "naufal.hadi@gmail.com",
+    "password": "1234"
+  },
+  {
+    "id": 18,
+    "name": "Olivia Rose",
+    "email": "olivia.rose@gmail.com",
+    "password": "1234"
+  },
+  {
+    "id": 19,
+    "name": "Panji Kusuma",
+    "email": "panji.kusuma@gmail.com",
+    "password": "1234"
+  },
+  {
+    "id": 20,
+    "name": "Rina Lestari",
+    "email": "rina.lestari@gmail.com",
     "password": "1234"
   }
 ]

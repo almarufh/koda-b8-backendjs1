@@ -4,7 +4,8 @@ import {
     getUsers,
     DetailUser,
     changeUser,
-    deleteUser
+    deleteUser,
+    searchUser
 } from "../models/users_models.js"
 
 /**
@@ -68,6 +69,15 @@ export function deletedUser (req, res) {
     const {email} = req.params
         console.log(res)
     let results = deleteUser(email)
+    res.json({
+        results
+    })
+}
+
+export function search (req, res) {
+    const searching  = req.query.searching
+    console.log(searching)
+    let results = searchUser(searching)
     res.json({
         results
     })
