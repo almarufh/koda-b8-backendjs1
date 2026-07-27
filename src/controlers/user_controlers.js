@@ -2,7 +2,8 @@ import {constants} from "node:http2"
 import {
     createUser,
     getUsers,
-    DetailUser
+    DetailUser,
+    changeUser
 } from "../models/users_models.js"
 
 /**
@@ -51,4 +52,11 @@ export function getDetailUser (req, res) {
     res.json({
         results
     })
+}
+
+export function updateUser (req, res) {
+    const emailUser = req.params.email
+    const {email, name} = req.body
+    let results = changeUser(emailUser, email, name)
+    console.log(results)
 }

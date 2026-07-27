@@ -1,0 +1,30 @@
+POST /auth/login
+Host: localhost:8080
+Content-Type: application/x-www-form-urlencoded
+
+email=hidayatmaruf99@gmail.com&password=1234
+
+###
+
+POST /auth/register
+Host: localhost:8080
+Content-Type: application/x-www-form-urlencoded
+
+id=3&name=Alhy Ghufron&email=alhy23@gmail.com&password=1234
+
+###
+
+PATCH /user/update/admin@gmail.com
+Host: localhost:8080
+Content-Type: application/x-www-form-urlencoded
+
+name=Alhy Ghufron&email=alhy23@gmail.com
+
+###
+
+GET /user/lists
+Host: localhost:8080
+
+###
+GET /user/detail/admin@gmail.com
+Host: localhost:8080
