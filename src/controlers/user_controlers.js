@@ -76,8 +76,10 @@ export function deletedUser (req, res) {
 
 export function search (req, res) {
     const searching  = req.query.searching
-    console.log(searching)
-    let results = searchUser(searching)
+    const limit  = req.query.limit
+    const page  = req.query.page
+    console.log(searching, limit, page)
+    let results = searchUser(searching, limit, page)
     res.json({
         results
     })
