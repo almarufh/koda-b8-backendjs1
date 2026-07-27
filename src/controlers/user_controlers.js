@@ -66,6 +66,7 @@ export function updateUser (req, res) {
 
 export function deletedUser (req, res) {
     const {email} = req.params
+        console.log(res)
     let results = deleteUser(email)
     res.json({
         results
