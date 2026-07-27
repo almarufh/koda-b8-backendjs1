@@ -1,0 +1,27 @@
+{
+  "name": "koda-b8-backendjs1",
+  "version": "1.0.0",
+  "description": "Create crud",
+  "keywords": [
+    "express"
+  ],
+  "homepage": "https://github.com/almarufh/koda-b8-backendjs1#readme",
+  "bugs": {
+    "url": "https://github.com/almarufh/koda-b8-backendjs1/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/almarufh/koda-b8-backendjs1.git"
+  },
+  "license": "MIT",
+  "author": "almarufh",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
