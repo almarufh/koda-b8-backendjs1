@@ -47,14 +47,13 @@ function DetailUser (email) {
 
 function changeUser(emailUser, email, name) {
     let results = user.findIndex(u => u.email === emailUser)
-    console.log(results)
     if (results !== -1) {
         user[results].email = email
         user[results].name = name
         return {
             status: true,
             message: `Updated ${emailUser} success`,
-            data: user
+            data: user[results]
         }
     } else {
         return {
@@ -66,10 +65,31 @@ function changeUser(emailUser, email, name) {
 
 }
 
+function deleteUser(emailUser, email, name) {
+    let results = user.findIndex(u => u.email === emailUser)
+    if (results !== -1) {
+        let res = user.filter(e => e.email !== emailUser)
+        user = res
+        return {
+            status: true,
+            message: `Delete user ${emailUser} success`,
+            data: res
+        }
+    } else {
+        return {
+            status: false,
+            message: `DeLete user  ${emailUser} failed, user not found`,
+            data: {}
+        }
+    }
+
+}
+
 export { 
     user, 
     createUser,
     getUsers,
     DetailUser,
-    changeUser
+    changeUser,
+    deleteUser
 }

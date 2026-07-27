@@ -6,5 +6,6 @@ const userRouter = Router()
 userRouter.get("/lists", userController.getListUsers)
 userRouter.get("/detail/:email", userController.getDetailUser)
 userRouter.patch("/update/:email", userController.updateUser)
+userRouter.delete("/delete/:email", userController.deletedUser)
 
 export default userRouter

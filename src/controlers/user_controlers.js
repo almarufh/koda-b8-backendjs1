@@ -3,7 +3,8 @@ import {
     createUser,
     getUsers,
     DetailUser,
-    changeUser
+    changeUser,
+    deleteUser
 } from "../models/users_models.js"
 
 /**
@@ -58,5 +59,15 @@ export function updateUser (req, res) {
     const emailUser = req.params.email
     const {email, name} = req.body
     let results = changeUser(emailUser, email, name)
-    console.log(results)
+    res.json({
+        results
+    })
+}
+
+export function deletedUser (req, res) {
+    const {email} = req.params
+    let results = deleteUser(email)
+    res.json({
+        results
+    })
 }

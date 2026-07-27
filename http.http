@@ -13,12 +13,16 @@ Content-Type: application/x-www-form-urlencoded
 id=3&name=Alhy Ghufron&email=alhy23@gmail.com&password=1234
 
 ###
-
 PATCH /user/update/admin@gmail.com
 Host: localhost:8080
 Content-Type: application/x-www-form-urlencoded
 
 name=Alhy Ghufron&email=alhy23@gmail.com
+
+###
+DELETE /user/delete/admin@gmail.com
+Host: localhost:8080
+Content-Type: application/x-www-form-urlencoded
 
 ###
 
