@@ -4,7 +4,6 @@ import routers from "./src/routers/index.js"
 import {constants} from "node:http2"
 
 const app = express()
-
 app.use(express.urlencoded())
 
 app.use(routers)

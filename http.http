@@ -28,11 +28,31 @@ Content-Type: application/x-www-form-urlencoded
 
 GET /user/lists
 Host: localhost:8080
+Authorization:bismillah
+Origin: http://localhost:3000
 
 ###
 GET /user/detail/admin@gmail.com
 Host: localhost:8080
 
 ###
-GET /user/search?searching=mail&limit=20&page=1
+GET /user/search?searching=mail&limit=1&page=2
 Host: localhost:8080
+Authorization:bismillah
+Origin: http://localhost:3000
+
+###
+POST /user/image
+Host: localhost:8080
+Authorization:bismillah
+Origin: http://localhost:3000
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="coba"; filename="coba.png"
+Content-Type: image/png
+
+# < /home/almarufh_/movie_genres.png
+< /home/almarufh_/Downloads/goku.png
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW--

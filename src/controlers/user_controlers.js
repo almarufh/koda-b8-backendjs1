@@ -85,6 +85,7 @@ export function search (req, res) {
 export async function upload(req, res) {
     console.log(req.file)
     res.json({
-        success: true
+        success: true,
+        message: "upload images success"
     })   
 }
