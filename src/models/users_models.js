@@ -123,7 +123,7 @@ function searchUser (search, limit, page) {
     return {
         success: true,
         message: `${res.length} users found !`,
-        data: res.slice(start, start + limit)
+        data: res.slice(start, start + limit).toSorted((a,b)=> b.id-a.id)
     }
 }
 

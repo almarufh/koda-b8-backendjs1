@@ -34,5 +34,5 @@ GET /user/detail/admin@gmail.com
 Host: localhost:8080
 
 ###
-GET /user/search?searching=mail&limit=2&page=5
+GET /user/search?searching=mail&limit=20&page=1
 Host: localhost:8080
