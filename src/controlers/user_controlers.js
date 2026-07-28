@@ -75,12 +75,16 @@ export function deletedUser (req, res) {
 }
 
 export function search (req, res) {
-    const searching  = req.query.searching
-    const limit  = req.query.limit
-    const page  = req.query.page
-    console.log(searching, limit, page)
+    const {searching, limit, page} = req.query
     let results = searchUser(searching, limit, page)
     res.json({
         results
     })
+}
+
+export async function upload(req, res) {
+    console.log(req.file)
+    res.json({
+        success: true
+    })   
 }
